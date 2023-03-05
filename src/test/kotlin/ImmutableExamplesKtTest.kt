@@ -8,9 +8,10 @@ internal class ImmutableExamplesKtTest {
         val article2 = Article(4.5)
         val rabatt = 0.1
 
+        val value = sumWithDiscountFP(article1, article2, rabatt) ==
+                sumWithDiscountImp(article1, article2, rabatt)
         assert(
-            sumWithDiscountFP(article1, article2, rabatt) ==
-                    sumWithDiscountImp(article1, article2, rabatt)
+            value
         )
     }
 }
